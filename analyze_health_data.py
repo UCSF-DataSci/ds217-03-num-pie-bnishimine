@@ -67,13 +67,13 @@ def find_abnormal_readings(data):
         Dictionary with counts
     """
      # Heart rate > 90 (use boolean indexing)
-    hr_90 = data[['heart_rate'] > 90]
+    hr_90 = data[data['heart_rate'] > 90]
 
     # Systolic BP > 130 (use boolean indexing)
-    sbp_130 = data[['blood_pressure_systolic'] > 130]
+    sbp_130 = data[data['blood_pressure_systolic'] > 130]
 
     # Glucose > 110 (use boolean indexing)
-    glucose_110 = data[['glucose_level'] > 110]
+    glucose_110 = data[data['glucose_level'] > 110]
 
     # Return dictionary with counts
     abnormal = {
