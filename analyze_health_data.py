@@ -124,8 +124,8 @@ def save_report(report, filename):
 def main():
     """Main execution function."""
     data = load_data('health_data.csv')
-    stats = calculate_statistics()
-    abnormal = find_abnormal_readings()
+    stats = calculate_statistics(data)
+    abnormal = find_abnormal_readings(data)
     report = generate_report(data, stats, len(data))
                              
     save_report(report, 'output/analysis_report.txt')
