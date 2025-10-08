@@ -96,7 +96,6 @@ def generate_report(stats, abnormal, total_readings):
     Returns:
         Formatted string report
     """
-    # TODO: Create a formatted report string using f-strings
     report = f"Health Data Analysis\n"
     report += f"\nStats:\n"
     report += f"Average Heart Rate: {stats['avg_heart_rate']} bpm\n"
@@ -108,10 +107,6 @@ def generate_report(stats, abnormal, total_readings):
     report += f"High Glucose Level (>110 mg/dL): {abnormal['high_glucose']}\n"
     report += f"Total Readings: {total_readings}\n"
     return report
-    # TODO: Include all statistics with proper formatting using .1f for decimals
-    # Example: f"Heart Rate: {stats['avg_heart_rate']:.1f} bpm"
-    # TODO: Include section headers and labels for readability
-    # TODO: Include total_readings, all averages, and all abnormal counts
     pass
 
 
@@ -135,14 +130,6 @@ def main():
                              
     save_report(report, 'output/analysis_report.txt')
     print("Analysis complete. Report saved to 'output/analysis_report.txt'.")
-    # TODO: Load the data from 'health_data.csv' using load_data()
-    # TODO: Calculate statistics using calculate_statistics()
-    # TODO: Find abnormal readings using find_abnormal_readings()
-    # TODO: Calculate total readings using len(data)
-    # TODO: Generate report using generate_report()
-    # TODO: Save to 'output/analysis_report.txt' using save_report()
-    # TODO: Print success message
-    pass
 
 
 if __name__ == "__main__":
