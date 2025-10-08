@@ -126,7 +126,7 @@ def main():
     data = load_data('health_data.csv')
     stats = calculate_statistics(data)
     abnormal = find_abnormal_readings(data)
-    report = generate_report(data, stats, len(data))
+    report = generate_report(stats, abnormal, len(data))
                              
     save_report(report, 'output/analysis_report.txt')
     print("Analysis complete. Report saved to 'output/analysis_report.txt'.")
